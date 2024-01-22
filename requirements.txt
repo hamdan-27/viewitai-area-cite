@@ -1,5 +1,12 @@
-streamlit
-openai
+streamlit==1.30.0
+googlemaps
+langchain
 langchain-experimental
-langchain==0.1.0
+langchain_openai
+openai
 pandas
+proto-plus==1.22.2
+protobuf==3.20.0
+pydantic
+tabulate
+tiktoken

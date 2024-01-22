@@ -74,12 +74,7 @@ spinner_texts = [
 os.environ["GPLACES_API_KEY"] = st.secrets['gplaces_key']
 
 # App Title
-st.header('Dubai\'s First Virtual Property Agent')
-h1, h2 = st.columns(2)
-with h1:
-    st.text('The Real Estate Agent that never sleeps.')
-with h2:
-    st.text("Now in Alpha stage.")
+st.header('Viewit AI - Citations Test')
 
 
 # # Radio button to switch between data variants

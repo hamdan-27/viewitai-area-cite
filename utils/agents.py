@@ -7,11 +7,11 @@ from langchain.chains.llm import LLMChain
 
 from utils.prompts import *
 
-# import streamlit as st
+import streamlit as st
 import pandas as pd
 
 
-# @st.cache_data(show_spinner=False)
+@st.cache_data(show_spinner=False)
 def load_data(filename) -> pd.DataFrame:
     """Loads the csv data that will be used as a knowledge base for the chatbot
     
@@ -32,17 +32,14 @@ prefix_map = {
     'reidin_new.csv': REIDIN_PREFIX,
     'reidin_insight_data.csv': NEW_PREFIX,
     'reidin_merged.csv': NEW_PREFIX,
+    'reidin_merged_citations.csv': NEW_PREFIX,
     'citations.csv': NEW_PREFIX,
     'NEW_RENT_3HK.csv': RENT_PREFIX
 }
 
-# @st.cache_data(show_spinner=False)
+@st.cache_data(show_spinner=False)
 def df_prefix(filename):
-    try:
-        (df, prefix) = (load_data(filename), prefix_map[filename])
-    except KeyError:
-        (df, prefix) = (load_data('citations.csv'), NEW_PREFIX)
-    
+    (df, prefix) = (load_data(filename), prefix_map[filename])
     return (df, prefix)
 
 

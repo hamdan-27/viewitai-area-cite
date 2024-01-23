@@ -40,7 +40,7 @@ TEMPERATURE = 0.1
 model = 'gpt-4'
 
 df, PREFIX = agents.df_prefix('reidin_merged_citations.csv')
-df = df.drop(['Area', 'Sub'], axis=1, inplace=False)
+df = df.drop(['Area', 'Sub'], inplace=False)
 
 # def radio():
 #     data_option = st.radio('Choose data', ['Area Citation', 'Individual Citation'],
